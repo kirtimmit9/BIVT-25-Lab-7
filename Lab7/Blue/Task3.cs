@@ -9,8 +9,14 @@ namespace Lab7.Blue
             private int[] _penaltyTimes;
             private int _matchCount;
 
-            public string Name => _name;
-            public string Surname => _surname;
+            public string Name
+            {
+                get { return _name; }
+            }
+            public string Surname
+            {
+                get { return _surname; }
+            }
 
             public int[] PenaltyTimes
             {
@@ -36,7 +42,7 @@ namespace Lab7.Blue
                     return sum;
                 }
             }
-
+            // проверка на 10
             public bool IsExpelled
             {
                 get
@@ -65,6 +71,7 @@ namespace Lab7.Blue
                 Array.Resize(ref _penaltyTimes, _penaltyTimes.Length + 1);
                 _penaltyTimes[_penaltyTimes.Length - 1] = time;
             }
+            // добавляет щтрафы
 
             public static void Sort(Participant[] array)
             {

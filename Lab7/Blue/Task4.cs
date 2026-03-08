@@ -52,10 +52,10 @@ namespace Lab7.Blue
 
             public void PlayMatch(int result)
             {
-                if (_matchCount < _scores.Length)
+                if (_matchCount < _scores.Length) // проверка что матчуй меньше
                 {
                     _scores[_matchCount] = result;
-                    _matchCount++;
+                    _matchCount++; 
                 }
             }
 
@@ -129,7 +129,7 @@ namespace Lab7.Blue
 
                 for (int i = 0; i < _teamCount - 1; i++)
                 {
-                    for (int j = 0; j < _teamCount - 1 - i; j++)
+                    for (int j = 0; j < _teamCount - 1 - i; j++)  // с каждым проходом проверяем на один элемент меньше потому что самый "легкий" элемент уже "всплыл" в конец
                     {
                         if (_teams[j].TotalScore < _teams[j + 1].TotalScore)
                         {

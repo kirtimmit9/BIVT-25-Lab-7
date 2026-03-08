@@ -21,7 +21,7 @@ namespace Lab7.Blue
                 _isPlaceSet = false;
             }
 
-            public void SetPlace(int place)
+            public void SetPlace(int place) //место спортсмена
             {
                 if (!_isPlaceSet)
                 {
@@ -75,7 +75,7 @@ namespace Lab7.Blue
             {
                 get
                 {
-                    int bestPlace = 18;
+                    int bestPlace = 18; // худшее место
                     for (int i = 0; i < _sportsmanCount; i++)
                     {
                         int place = _sportsmen[i].Place;
@@ -125,11 +125,11 @@ namespace Lab7.Blue
                     {
                         bool shouldSwap = false;
 
-                        if (teams[j].TotalScore < teams[j + 1].TotalScore)
+                        if (teams[j].TotalScore < teams[j + 1].TotalScore) // Если у левой команды (j) баллов меньше, чем у правой (j+1) то нужно поменять местами (большая сумма должна быть слева)
                         {
                             shouldSwap = true;
                         }
-                        else if (teams[j].TotalScore == teams[j + 1].TotalScore)
+                        else if (teams[j].TotalScore == teams[j + 1].TotalScore) //Если суммы баллов равны то сравниваем лучшие места (TopPlace)
                         {
 
                             if (teams[j].TopPlace > teams[j + 1].TopPlace)
